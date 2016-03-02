@@ -1,0 +1,566 @@
+
+<html>       
+ 
+ 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">        
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>        
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>        
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>               
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>              
+ 
+ 
+<style>       
+.onderdeel {       
+width:60%;       
+}       
+     
+.onderdeelnaam {       
+width:100px;       
+}       
+ 
+ 
+.btn-group, .onderdeelnaam, img {       
+float:left;       
+margin-right:30%;   
+}       
+ 
+ 
+.onderdeel img {       
+height:60px;       
+width:60px;       
+}       
+ 
+ 
+.prijs {       
+float:right;   
+}    
+ 
+ 
+img {   
+position:absolute;   
+left:30%;   
+}      
+     
+.specs {       
+clear:both;       
+}       
+</style>       
+<body>       
+ 
+ 
+<div ng-app="myApp" ng-controller="onderdelenCtrl">        
+<b>Onderdelen</b>        
+<hr>        
+     
+<div class="onderdeel">       
+<b id="onderdeelnaam1"></b><br> 
+<div class="btn-group onderdeelnaam1">        
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="onderdeel1">        
+  </button>        
+  <ul class="dropdown-menu">        
+    <li><a href="#" id="onderdeel1-1"></a></li>    
+    <li><a href="#" id="onderdeel1-2"></a></li>    
+  </ul>        
+</div>       
+<img id="foto1" src="http://www.w3schools.com/html/pic_html5.gif">  
+<div class="prijs" id="prijs1">       
+</div>       
+<div class="specs">       
+Specificaties kort<br>         
+<div ng-click="togglespec(1)">+ Meer specificaties</div>        
+<div id="meerspec1" ng-hide="spec1">      
+</div>       
+</div>        
+</div>       
+ 
+ 
+<hr>       
+ 
+ 
+<div class="onderdeel">       
+<b id="onderdeelnaam2"></b><br> 
+<div class="btn-group onderdeelnaam2">        
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="onderdeel2">        
+  </button>        
+  <ul class="dropdown-menu">        
+    <li><a href="#" id="onderdeel2-1"></a></li>    
+  </ul>        
+</div>       
+<img id="foto2" src="http://www.w3schools.com/html/pic_html5.gif">       
+<div class="prijs" id="prijs2">       
+</div>       
+<div class="specs">       
+Specificaties kort<br>         
+<div ng-click="togglespec(2)">+ Meer specificaties</div>        
+<div id="meerspec2" ng-hide="spec2">        
+</div>       
+</div>       
+</div>       
+     
+<hr>        
+ 
+ 
+<div class="onderdeel">       
+<b id="onderdeelnaam3"></b><br>       
+<div class="btn-group onderdeelnaam3">        
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="onderdeel3">        
+  </button>        
+  <ul class="dropdown-menu">        
+    <li><a href="#" id="onderdeel3-1"></a></li>    
+    <li><a href="#" id="onderdeel3-2"></a></li>    
+  </ul>        
+</div>       
+<img id="foto3" src="http://www.w3schools.com/html/pic_html5.gif">       
+<div class="prijs" id="prijs3">       
+</div>       
+<div class="specs">       
+Specificaties kort<br>         
+<div ng-click="togglespec(3)">+ Meer specificaties</div>        
+<div id="meerspec3" ng-hide="spec3">      
+</div>       
+</div>        
+</div>       
+ 
+ 
+<hr>   
+ 
+ 
+<div class="onderdeel">       
+<b id="onderdeelnaam4"></b><br>    
+<div class="btn-group onderdeelnaam4">        
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="onderdeel4">        
+  </button>        
+  <ul class="dropdown-menu">        
+    <li><a href="#" id="onderdeel4-1"></a></li>    
+    <li><a href="#" id="onderdeel4-2"></a></li>    
+  </ul>        
+</div>       
+<img id="foto4" src="http://www.w3schools.com/html/pic_html5.gif">       
+<div class="prijs" id="prijs4">       
+</div>       
+<div class="specs">       
+Specificaties kort<br>         
+<div ng-click="togglespec(4)">+ Meer specificaties</div>        
+<div id="meerspec4" ng-hide="spec4">      
+</div>       
+</div>        
+</div>     
+ 
+ 
+<hr>  
+ 
+ 
+<div class="onderdeel">       
+<b id="onderdeelnaam5"></b><br>    
+<div class="btn-group onderdeelnaam5">        
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="onderdeel5">        
+  </button>        
+  <ul class="dropdown-menu">        
+    <li><a href="#" id="onderdeel5-1"></a></li>    
+    <li><a href="#" id="onderdeel5-2"></a></li>    
+  </ul>        
+</div>       
+<img id="foto5" src="http://www.w3schools.com/html/pic_html5.gif">       
+<div class="prijs" id="prijs5">       
+</div>       
+<div class="specs">       
+Specificaties kort<br>         
+<div ng-click="togglespec(5)">+ Meer specificaties</div>        
+<div id="meerspec5" ng-hide="spec5">      
+</div>       
+</div>        
+</div>     
+ 
+ 
+<hr>  
+ 
+ 
+<div class="onderdeel">       
+<b id="onderdeelnaam6"></b><br>   
+<div class="btn-group onderdeelnaam6">        
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="onderdeel6">        
+  </button>        
+  <ul class="dropdown-menu">        
+    <li><a href="#" id="onderdeel6-1"></a></li>    
+    <li><a href="#" id="onderdeel6-2"></a></li>    
+  </ul>        
+</div>       
+<img id="foto6" src="http://www.w3schools.com/html/pic_html5.gif">       
+<div class="prijs" id="prijs6">       
+</div>       
+<div class="specs">       
+Specificaties kort<br>         
+<div ng-click="togglespec(6)">+ Meer specificaties</div>        
+<div id="meerspec6" ng-hide="spec6">      
+</div>       
+</div>        
+</div>     
+ 
+ 
+<hr>  
+ 
+ 
+<div class="onderdeel">       
+<b id="onderdeelnaam7"></b><br> 
+<div class="btn-group onderdeelnaam7">        
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="onderdeel7">        
+  </button>        
+  <ul class="dropdown-menu">        
+    <li><a href="#" id="onderdeel7-1"></a></li>    
+    <li><a href="#" id="onderdeel7-2"></a></li>    
+  </ul>        
+</div>       
+<img id="foto7" src="http://www.w3schools.com/html/pic_html5.gif">       
+<div class="prijs" id="prijs7">       
+</div>       
+<div class="specs">       
+Specificaties kort<br>         
+<div ng-click="togglespec(7)">+ Meer specificaties</div>        
+<div id="meerspec7" ng-hide="spec7">      
+</div>       
+</div>        
+</div>     
+ 
+ 
+<hr>  
+ 
+ 
+<div class="onderdeel">       
+<b id="onderdeelnaam8"></b><br> 
+<div class="btn-group onderdeelnaam8">        
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="onderdeel8">        
+  </button>        
+  <ul class="dropdown-menu">        
+    <li><a href="#" id="onderdeel8-1"></a></li>    
+    <li><a href="#" id="onderdeel8-2"></a></li>    
+  </ul>        
+</div>       
+<img id="foto8" src="http://www.w3schools.com/html/pic_html5.gif">       
+<div class="prijs" id="prijs8">       
+</div>       
+<div class="specs">       
+Specificaties kort<br>         
+<div ng-click="togglespec(8)">+ Meer specificaties</div>        
+<div id="meerspec8" ng-hide="spec8">      
+</div>       
+</div>        
+</div>     
+ 
+ 
+<hr>  
+ 
+ 
+<div class="onderdeel">       
+<b id="onderdeelnaam9"></b><br> 
+<div class="btn-group onderdeelnaam9">        
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="onderdeel9">        
+  </button>        
+  <ul class="dropdown-menu" id="onderdeelmenu9">        
+    <li><a href="#" id="onderdeel9-1"></a></li>    
+    <li><a href="#" id="onderdeel9-2"></a></li>    
+  </ul>        
+</div>       
+<img id="foto9" src="http://www.w3schools.com/html/pic_html5.gif">       
+<div class="prijs" id="prijs9">       
+</div>       
+<div class="specs">       
+Specificaties kort<br>         
+<div ng-click="togglespec(9)">+ Meer specificaties</div>        
+<div id="meerspec9" ng-hide="spec9">      
+</div>       
+</div>        
+</div>     
+ 
+ 
+<hr>  
+ 
+ 
+</div>         
+     
+<script>  
+var onderdelenlijst = ["processor", "moederbord", "video", "opslag", "geheugen", "behuizing", "voeding", "dvd", "geluid"];  
+ 
+ 
+var indexonderdelenlijst = onderdelenlijst.length;  
+ 
+ 
+$(".dropdown-menu li a").click(function() {    
+    $(this).closest('.btn-group').find('.btn').text($(this).text()).append(" <span class='caret'>");    
+});     
+     
+var app = angular.module('myApp', ['ngAnimate']);               
+app.controller('onderdelenCtrl', function($scope) {  
+i=0;  
+while (i < indexonderdelenlijst) {  
+i++;  
+$scope['spec'+i] = true; 
+$scope.togglespec = function(index) {                
+$scope['spec'+index] =! $scope['spec'+index]; }           
+}  
+});           
+       
+var response = {       
+    
+"Processor":[       
+{       
+"Processor": 
+{       
+"Onderdeel":"Intel Core i7 4790",       
+"foto":"http://images.skillbooks.de/image300/145723.jpeg",       
+"prijs":"€319,00",       
+"specificaties":"wut"       
+}       
+},       
+{       
+"Processor":       
+{       
+"Onderdeel":"Onderdeel 1.2",       
+"foto":"http://content.hwigroup.net/images/articles/windows7.png",       
+"prijs":"€30",       
+"specificaties":"<b>lol</b>"       
+}       
+}      
+],      
+ 
+"Moederbord":[      
+{       
+"Moederbord":       
+{       
+"Onderdeel":"ASRock B85 Pro4",       
+"foto":"http://www.subitopc.it/wp-content/uploads/2015/02/B85-Pro44-600x600.jpg",       
+"prijs":"€74,90", 
+"specificaties":"lol"
+}       
+}       
+],    
+ 
+"Videokaart":[       
+{       
+"Videokaart":     
+{       
+"Onderdeel":"GeForce GTX 750",       
+"foto":"http://titan-ice.co.za/images/detailed/14/NE5X750S1301.jpg",       
+"prijs":"€50",       
+"specificaties":"wuut"       
+}       
+},       
+{       
+"Videokaart":       
+{       
+"Onderdeel":"Onderdeel 3.2",       
+"foto":"http://content.hwigroup.net/images/articles/windows7.png",       
+"prijs":"€60",       
+"specificaties":"<b>lool</b>"       
+}       
+}      
+],  
+ 
+"Opslag":[  
+{  
+"Opslag":  
+{       
+"Onderdeel":"Onderdeel 4.1",       
+"foto":"http://www.w3schools.com/html/pic_html5.gif",       
+"prijs":"€20",       
+"specificaties":"wutt"       
+}  
+},  
+{  
+"Opslag":  
+{       
+"Onderdeel":"Onderdeel 4.2",       
+"foto":"http://content.hwigroup.net/images/articles/windows7.png",       
+"prijs":"€30",       
+"specificaties":"wwut"       
+}  
+}  
+],
+
+"Geheugen":[  
+{  
+"Geheugen":  
+{       
+"Onderdeel":"Onderdeel 4.1",       
+"foto":"http://www.w3schools.com/html/pic_html5.gif",       
+"prijs":"€20",       
+"specificaties":"wutt"       
+}  
+},  
+{  
+"Geheugen":  
+{       
+"Onderdeel":"Onderdeel 4.2",       
+"foto":"http://content.hwigroup.net/images/articles/windows7.png",       
+"prijs":"€30",       
+"specificaties":"wwut"       
+}  
+}  
+],
+
+"Geheugen":[  
+{  
+"Geheugen":  
+{       
+"Onderdeel":"Onderdeel 4.1",       
+"foto":"http://www.w3schools.com/html/pic_html5.gif",       
+"prijs":"€20",       
+"specificaties":"wutt"       
+}  
+},  
+{  
+"Geheugen":  
+{       
+"Onderdeel":"Onderdeel 4.2",       
+"foto":"http://content.hwigroup.net/images/articles/windows7.png",       
+"prijs":"€30",       
+"specificaties":"wwut"       
+}  
+}  
+],
+};       
+ 
+for (var i = 0, len1 = response.Processor.length; i < len1; i++) {       
+j=i+1;     
+var Processor = response.Processor[i].Processor.Onderdeel; 
+$('#onderdeelnaam1').html("Processor"); 
+$('#onderdeel1').html(response.Processor[0].Processor.Onderdeel + " <span class='caret'></span>");     
+$('#onderdeel1-' + j).text(Processor);     
+$("#meerspec1").html(response.Processor[0].Processor.specificaties);   
+$("#prijs1").html(response.Processor[0].Processor.prijs);   
+$("#foto1").attr("src",response.Processor[0].Processor.foto);  
+}       
+     
+for (var i = 0, len2 = response.Moederbord.length; i < len2; i++) {       
+j=i+1;     
+var Moederbord = response.Moederbord[i].Moederbord.Onderdeel; 
+$('#onderdeelnaam2').html("Moederbord"); 
+$('#onderdeel2').html(response.Moederbord[0].Moederbord.Onderdeel + " <span class='caret'></span>");     
+$('#onderdeel2-' + j).text(Moederbord);     
+$("#meerspec2").html(response.Moederbord[0].Moederbord.specificaties);   
+$("#prijs2").html(response.Moederbord[0].Moederbord.prijs);   
+$("#foto2").attr("src",response.Moederbord[0].Moederbord.foto);    
+}       
+ 
+for (var i = 0, len3 = response.Videokaart.length; i < len3; i++) {       
+j=i+1;     
+var Videokaart = response.Videokaart[i].Videokaart.Onderdeel;   
+$('#onderdeelnaam3').html("Videokaart");     
+$('#onderdeel3').html(response.Videokaart[0].Videokaart.Onderdeel + " <span class='caret'></span>");     
+$('#onderdeel3-' + j).text(Videokaart);     
+$("#meerspec3").html(response.Videokaart[0].Videokaart.specificaties);   
+$("#prijs3").html(response.Videokaart[0].Videokaart.prijs);  
+$("#foto3").attr("src",response.Videokaart[0].Videokaart.foto);      
+}  
+ 
+for (var i = 0, len4 = response.Opslag.length; i < len4; i++) {       
+j=i+1;     
+var Opslag = response.Opslag[i].Opslag.Onderdeel; 
+$('#onderdeelnaam4').html("Opslag");  
+$('#onderdeel4').html(response.Opslag[0].Opslag.Onderdeel + " <span class='caret'></span>");     
+$('#onderdeel4-' + j).text(Opslag);     
+$("#meerspec4").html(response.Opslag[0].Opslag.specificaties);   
+$("#prijs4").html(response.Opslag[0].Opslag.prijs);  
+$("#foto4").attr("src",response.Opslag[0].Opslag.foto);      
+}     
+ 
+for (var i = 0, len5 = response.Geheugen.length; i < len5; i++) {       
+j=i+1;     
+var Geheugen= response.Geheugen[i].Geheugen.Onderdeel; 
+$('#onderdeelnaam5').html("Geheugen");   
+$('#onderdeel5').html(response.Geheugen[0].Geheugen.Onderdeel + " <span class='caret'></span>");     
+$('#onderdeel5-' + j).text(Geheugen);     
+$("#meerspec5").html(response.Geheugen[0].Geheugen.specificaties);   
+$("#prijs5").html(response.Geheugen[0].Geheugen.prijs);  
+$("#foto5").attr("src",response.Geheugen[0].Geheugen.foto);      
+}     
+ 
+for (var i = 0, len6 = response.lowbudget.length; i < len6; i++) {       
+j=i+1;     
+var lowbudgetCode = response.lowbudget[i].Onderdeel.Onderdeel;       
+$('#onderdeelnaam6').html("Moederbord");  
+$('#onderdeel6').html(response.lowbudget[0].Onderdeel.Onderdeel + " <span class='caret'></span>");     
+$('#onderdeel6-' + j).text(lowbudgetCode);     
+$("#meerspec6").html(response.lowbudget[0].Onderdeel.specificaties);   
+$("#prijs6").html(response.lowbudget[0].Onderdeel.prijs);  
+$("#foto6").attr("src",response.lowbudget[0].Onderdeel.foto);      
+}     
+ 
+for (var i = 0, len7 = response.lowbudget.length; i < len7; i++) {       
+j=i+1;     
+var lowbudgetCode = response.lowbudget[i].Onderdeel.Onderdeel;       
+$('#onderdeelnaam7').html("Moederbord");  
+$('#onderdeel7').html(response.lowbudget[0].Onderdeel.Onderdeel + " <span class='caret'></span>");     
+$('#onderdeel7-' + j).text(lowbudgetCode);     
+$("#meerspec7").html(response.lowbudget[0].Onderdeel.specificaties);   
+$("#prijs7").html(response.lowbudget[0].Onderdeel.prijs);  
+$("#foto7").attr("src",response.lowbudget[0].Onderdeel.foto);      
+}     
+ 
+for (var i = 0, len8 = response.lowbudget.length; i < len8; i++) {       
+j=i+1;     
+var lowbudgetCode = response.lowbudget[i].Onderdeel.Onderdeel;       
+$('#onderdeelnaam8').html("Moederbord");  
+$('#onderdeel8').html(response.lowbudget[0].Onderdeel.Onderdeel + " <span class='caret'></span>");     
+$('#onderdeel8-' + j).text(lowbudgetCode);     
+$("#meerspec8").html(response.lowbudget[0].Onderdeel.specificaties);   
+$("#prijs8").html(response.lowbudget[0].Onderdeel.prijs);  
+$("#foto8").attr("src",response.lowbudget[0].Onderdeel.foto);      
+}
+ 
+for (var i = 0, len9 = response.lowbudget.length; i < len9; i++) {       
+j=i+1;     
+var lowbudgetCode = response.lowbudget[i].Onderdeel.Onderdeel;       
+$('#onderdeelnaam9').html("Moederbord");  
+$('#onderdeel9').html(response.lowbudget[0].Onderdeel.Onderdeel + " <span class='caret'></span>");     
+$('#onderdeel9-' + j).text(lowbudgetCode);     
+$("#meerspec9").html(response.lowbudget[0].Onderdeel.specificaties);   
+$("#prijs9").html(response.lowbudget[0].Onderdeel.prijs);  
+$("#foto9").attr("src",response.lowbudget[0].Onderdeel.foto);      
+}     
+
+$( "#onderdeel1-1" ).click(function() {         
+$("#meerspec1").html(response.Processor[0].Processor.specificaties);   
+$("#prijs1").html(response.Processor[0].Processor.prijs);  
+$("#foto1").attr("src",response.Processor[0].Processor.foto);});     
+       
+$( "#onderdeel1-2" ).click(function() {         
+$("#meerspec1").html(response.Processor[1].Processor.specificaties);   
+$("#prijs1").html(response.Processor[1].Processor.prijs);  
+$("#foto1").attr("src",response.Processor[1].Processor.foto);});         
+ 
+$( "#onderdeel3-1" ).click(function() {         
+$("#meerspec3").html(response.Videokaart[0].Videokaart.specificaties);   
+$("#prijs3").html(response.Videokaart[0].Videokaart.prijs);  
+$("#foto3").attr("src",response.Videokaart[0].Videokaart.foto);});   
+ 
+$( "#onderdeel3-2" ).click(function() {   
+$("#meerspec3").html(response.Videokaart[1].Videokaart.specificaties);   
+$("#prijs3").html(response.Videokaart[1].Videokaart.prijs);  
+$("#foto3").attr("src",response.Videokaart[1].Videokaart.foto);});  
+ 
+$( "#onderdeel4-1" ).click(function() {         
+$("#meerspec4").html(response.Opslag[0].Opslag.specificaties);   
+$("#prijs4").html(response.Opslag[0].Opslag.prijs);  
+$("#foto4").attr("src",response.Opslag[0].Opslag.foto);});   
+ 
+$( "#onderdeel4-2" ).click(function() {   
+$("#meerspec4").html(response.Opslag[1].Opslag.specificaties);   
+$("#prijs4").html(response.Opslag[1].Opslag.prijs);  
+$("#foto4").attr("src",response.Opslag[1].Opslag.foto);});    
+
+$( "#onderdeel5-1" ).click(function() {         
+$("#meerspec5").html(response.Geheugen[0].Geheugen.specificaties);   
+$("#prijs5").html(response.Geheugen[0].Geheugen.prijs);  
+$("#foto5").attr("src",response.Geheugen[0].Geheugen.foto);});   
+ 
+$( "#onderdeel5-2" ).click(function() {   
+$("#meerspec5").html(response.Geheugen[1].Geheugen.specificaties);   
+$("#prijs5").html(response.Geheugen[1].Geheugen.prijs);  
+$("#foto5").attr("src",response.Geheugen[1].Geheugen.foto);});   
+</script>        
+    
+</body>       
+</html>  
+ 
+ 
+
