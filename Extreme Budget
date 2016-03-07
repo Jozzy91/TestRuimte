@@ -1,4 +1,6 @@
 
+
+ 
 <html>       
  
  
@@ -278,7 +280,7 @@ Specificaties kort<br>
 </div>         
      
 <script>  
-var onderdelenlijst = ["processor", "moederbord", "video", "opslag", "geheugen", "behuizing", "voeding", "dvd", "geluid"];  
+var onderdelenlijst = ["Processor", "Moederbord", "Videokaart", "Opslag", "Geheugen", "Behuizing", "Voeding", "Dvdspeler", "Geluidskaart"];  
  
  
 var indexonderdelenlijst = onderdelenlijst.length;  
@@ -332,7 +334,7 @@ var response = {
 "specificaties":"lol"
 }       
 }       
-],    
+],      
  
 "Videokaart":[       
 {       
@@ -374,49 +376,7 @@ var response = {
 "specificaties":"wwut"       
 }  
 }  
-],
-
-"Geheugen":[  
-{  
-"Geheugen":  
-{       
-"Onderdeel":"Onderdeel 4.1",       
-"foto":"http://www.w3schools.com/html/pic_html5.gif",       
-"prijs":"€20",       
-"specificaties":"wutt"       
-}  
-},  
-{  
-"Geheugen":  
-{       
-"Onderdeel":"Onderdeel 4.2",       
-"foto":"http://content.hwigroup.net/images/articles/windows7.png",       
-"prijs":"€30",       
-"specificaties":"wwut"       
-}  
-}  
-],
-
-"Geheugen":[  
-{  
-"Geheugen":  
-{       
-"Onderdeel":"Onderdeel 4.1",       
-"foto":"http://www.w3schools.com/html/pic_html5.gif",       
-"prijs":"€20",       
-"specificaties":"wutt"       
-}  
-},  
-{  
-"Geheugen":  
-{       
-"Onderdeel":"Onderdeel 4.2",       
-"foto":"http://content.hwigroup.net/images/articles/windows7.png",       
-"prijs":"€30",       
-"specificaties":"wwut"       
-}  
-}  
-],
+] 
 };       
  
 for (var i = 0, len1 = response.Processor.length; i < len1; i++) {       
@@ -438,7 +398,7 @@ $('#onderdeel2').html(response.Moederbord[0].Moederbord.Onderdeel + " <span clas
 $('#onderdeel2-' + j).text(Moederbord);     
 $("#meerspec2").html(response.Moederbord[0].Moederbord.specificaties);   
 $("#prijs2").html(response.Moederbord[0].Moederbord.prijs);   
-$("#foto2").attr("src",response.Moederbord[0].Moederbord.foto);    
+$("#foto2").attr("src",response.Moederbord[0].Moederbord.foto);  
 }       
  
 for (var i = 0, len3 = response.Videokaart.length; i < len3; i++) {       
@@ -462,62 +422,7 @@ $("#meerspec4").html(response.Opslag[0].Opslag.specificaties);
 $("#prijs4").html(response.Opslag[0].Opslag.prijs);  
 $("#foto4").attr("src",response.Opslag[0].Opslag.foto);      
 }     
- 
-for (var i = 0, len5 = response.Geheugen.length; i < len5; i++) {       
-j=i+1;     
-var Geheugen= response.Geheugen[i].Geheugen.Onderdeel; 
-$('#onderdeelnaam5').html("Geheugen");   
-$('#onderdeel5').html(response.Geheugen[0].Geheugen.Onderdeel + " <span class='caret'></span>");     
-$('#onderdeel5-' + j).text(Geheugen);     
-$("#meerspec5").html(response.Geheugen[0].Geheugen.specificaties);   
-$("#prijs5").html(response.Geheugen[0].Geheugen.prijs);  
-$("#foto5").attr("src",response.Geheugen[0].Geheugen.foto);      
-}     
- 
-for (var i = 0, len6 = response.lowbudget.length; i < len6; i++) {       
-j=i+1;     
-var lowbudgetCode = response.lowbudget[i].Onderdeel.Onderdeel;       
-$('#onderdeelnaam6').html("Moederbord");  
-$('#onderdeel6').html(response.lowbudget[0].Onderdeel.Onderdeel + " <span class='caret'></span>");     
-$('#onderdeel6-' + j).text(lowbudgetCode);     
-$("#meerspec6").html(response.lowbudget[0].Onderdeel.specificaties);   
-$("#prijs6").html(response.lowbudget[0].Onderdeel.prijs);  
-$("#foto6").attr("src",response.lowbudget[0].Onderdeel.foto);      
-}     
- 
-for (var i = 0, len7 = response.lowbudget.length; i < len7; i++) {       
-j=i+1;     
-var lowbudgetCode = response.lowbudget[i].Onderdeel.Onderdeel;       
-$('#onderdeelnaam7').html("Moederbord");  
-$('#onderdeel7').html(response.lowbudget[0].Onderdeel.Onderdeel + " <span class='caret'></span>");     
-$('#onderdeel7-' + j).text(lowbudgetCode);     
-$("#meerspec7").html(response.lowbudget[0].Onderdeel.specificaties);   
-$("#prijs7").html(response.lowbudget[0].Onderdeel.prijs);  
-$("#foto7").attr("src",response.lowbudget[0].Onderdeel.foto);      
-}     
- 
-for (var i = 0, len8 = response.lowbudget.length; i < len8; i++) {       
-j=i+1;     
-var lowbudgetCode = response.lowbudget[i].Onderdeel.Onderdeel;       
-$('#onderdeelnaam8').html("Moederbord");  
-$('#onderdeel8').html(response.lowbudget[0].Onderdeel.Onderdeel + " <span class='caret'></span>");     
-$('#onderdeel8-' + j).text(lowbudgetCode);     
-$("#meerspec8").html(response.lowbudget[0].Onderdeel.specificaties);   
-$("#prijs8").html(response.lowbudget[0].Onderdeel.prijs);  
-$("#foto8").attr("src",response.lowbudget[0].Onderdeel.foto);      
-}
- 
-for (var i = 0, len9 = response.lowbudget.length; i < len9; i++) {       
-j=i+1;     
-var lowbudgetCode = response.lowbudget[i].Onderdeel.Onderdeel;       
-$('#onderdeelnaam9').html("Moederbord");  
-$('#onderdeel9').html(response.lowbudget[0].Onderdeel.Onderdeel + " <span class='caret'></span>");     
-$('#onderdeel9-' + j).text(lowbudgetCode);     
-$("#meerspec9").html(response.lowbudget[0].Onderdeel.specificaties);   
-$("#prijs9").html(response.lowbudget[0].Onderdeel.prijs);  
-$("#foto9").attr("src",response.lowbudget[0].Onderdeel.foto);      
-}     
-
+          
 $( "#onderdeel1-1" ).click(function() {         
 $("#meerspec1").html(response.Processor[0].Processor.specificaties);   
 $("#prijs1").html(response.Processor[0].Processor.prijs);  
@@ -547,20 +452,7 @@ $( "#onderdeel4-2" ).click(function() {
 $("#meerspec4").html(response.Opslag[1].Opslag.specificaties);   
 $("#prijs4").html(response.Opslag[1].Opslag.prijs);  
 $("#foto4").attr("src",response.Opslag[1].Opslag.foto);});    
-
-$( "#onderdeel5-1" ).click(function() {         
-$("#meerspec5").html(response.Geheugen[0].Geheugen.specificaties);   
-$("#prijs5").html(response.Geheugen[0].Geheugen.prijs);  
-$("#foto5").attr("src",response.Geheugen[0].Geheugen.foto);});   
- 
-$( "#onderdeel5-2" ).click(function() {   
-$("#meerspec5").html(response.Geheugen[1].Geheugen.specificaties);   
-$("#prijs5").html(response.Geheugen[1].Geheugen.prijs);  
-$("#foto5").attr("src",response.Geheugen[1].Geheugen.foto);});   
 </script>        
     
 </body>       
 </html>  
- 
- 
-
